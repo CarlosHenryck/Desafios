@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+  }
+
+.cardsContainer {
+    height: 100vh;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(to right, #FF7E5F, #FEB47B);
+}
+
+.card_1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 35.688rem;
+    height: 20rem;
+    background-color: #1E0E00;
+    border-radius: 100px 10px;
+    text-align: center;
+}
+
+.question_1 {
+    width: 100%;
+    text-align: left;
+    margin-left: 4.875rem;
+    margin-top: 3rem;
+    color: white;
+}
+
+.card_2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+
+    width: 35.688rem;
+    height: 20rem;
+    background-color: #1E0E00;
+    border-radius: 100px 10px;
+    text-align: center;
+}
+
+.question_2 {
+    color: white;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.card_3 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+
+    width: 35.688rem;
+    height: 22rem;
+    background-color: #1E0E00;
+    border-radius: 100px 10px;
+    text-align: center;
+}
+
+.question_3 {
+    color: white;
+    margin-top: 40px;
+    width: 100%;
+    text-align: left;
+    margin-left: 4.875rem;
+}
+
+.chat {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+
+    width: 321px;
+    height: 532px;
+    background-color: white;
+    margin-left: 50px;
+    border-radius: 20px;
+}
+
+.chat h1 {
+    margin-top: 30px;
+}
+
+.line_1 {
+    width: 100px;
+    height: 2px;
+    background-color: #4F4F4F;
+}
+
+.line_2 {
+    width: 290px;
+    height: 2px;
+    background-color: #4F4F4F;
+    margin-top: 55px;
+    margin-left: 30px;
+}
+
+.line_3 {
+    width: 100px;
+    height: 1.8px;
+    background-color: #4f4f4f4b;
+    margin-top: 10px;
+}
+
+.ballons {
+    align-self: flex-start;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.ballons img{
+    border-radius: 100%;
+}
+
+textarea {
+    width: 500px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 8px;
+    resize: none;
+  }
+
+.ask {
+    color: white;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 37px;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.foot {
+    display: flex;
+    width: 100%;
+}
+
+.button {
+    width: 11.25rem;
+    height: 2.813rem;
+    color: white;
+    border-radius: 10px;
+    background-color: #FFA473;
+    align-self: flex-start;
+    margin-left: 2.5rem;
+    margin-top: 2rem;
+    cursor: pointer;
+
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.button:hover {
+    background-color: #ca7f56;
+}
+
+footer a {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    text-decoration: none;
+    color: black;
+}
+
+footer img {
+    width: 20px;
+    height: 20px;
+}

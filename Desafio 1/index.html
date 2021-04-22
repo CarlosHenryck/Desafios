@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="cardsContainer">
+        <div class="card_1">
+            <p class="ask">🍁 PERGUNTA 1 🍁</p>
+            <div class="line_1"></div>
+            <div class="question_1">
+                <input type="radio" id="human" name="human" value="yes">
+                <label for="human">Sou humano!</label><br>
+                <br>
+                <input type="radio" id="other" name="human" value="no">
+                <label for="human">Pertenço a uma raça que você não conhece!</label>
+            </div>     
+            <div class="foot">
+                <button type="button" class="button" onClick="trocar()">Prosseguir</button>
+                <div class="line_2"></div>
+            </div>   
+        </div>
+
+        <div class="card_2">
+            <p class="ask">🍁 PERGUNTA 2 🍁</p>
+            <div class="line_1"></div>
+            <p class="question_1">Em que mundo você vive?</p>
+            <textarea name="world" id="world"></textarea>    
+            <div class="foot">
+                <button class="button" onClick="trocar()">Prosseguir</button> 
+                <div class="line_2"></div>
+            </div>   
+        </div>
+
+        <div class="card_3">
+            <p class="ask">🍁 PERGUNTA 3 🍁</p>
+            <div class="line_1"></div>
+            <div class="question_3">
+                <label for="sorvete">
+                    <input type="checkbox" id="sorvete" name="sorvete">Gosto de sorvete
+                </label>
+                <br><br>
+                <label for = "dormir">
+                     <input type = "checkbox" name = "dormir">Prefiro estar dormindo                   
+                </label>
+                <br><br>
+                <label for = "cafe"> 
+                    <input type = "checkbox" name = "cafe">Amo café
+                </label>
+            </div>
+            <div class="foot">
+                <button class="button">Prosseguir</button> 
+                <div class="line_2"></div>
+            </div>   
+        </div>
+
+        <div class="chat">
+            <h1>Resultado</h1>
+            <div class="line_3"></div>
+
+            <div class="ballons">
+                <img src="avatar.png" alt="avatar">
+                <p class="text"></p>
+            </div>
+            
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://github.com/CarlosHenryck">
+            <img src="github.png" alt="github icon">
+            CarlosHenryck
+        </a>
+    </footer>:
+
+    <script src="index.js"></script>
+</body>
+</html>
