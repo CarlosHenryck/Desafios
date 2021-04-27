@@ -6,7 +6,11 @@ let card_3 = document.querySelector("div.card_3")
 let chat = document.querySelector("div.chat")
 let text = document.querySelector("p.text")
 
-let bot = document.querySelector("div.bot")
+let line = document.querySelectorAll("div.line_4")
+var lastLine = line[line.length - 1]
+
+let bot = document.querySelectorAll("div.bot")
+var lastBot = bot[bot.length - 1]
 
 let user = document.querySelector("div.user")
 
@@ -26,12 +30,12 @@ function trocar() {
         var lastText = takeLastText[takeLastText.length - 1]
         lastText.innerHTML = `Sou do planeta ${value}.`
 
-        addBalonBot();
+        addBalonBot(1.5);
         var takeLastText = document.querySelectorAll(".textBot")
         var lastText = takeLastText[takeLastText.length - 1]
         lastText.innerHTML = "Ohhh! Eu não conhecia esse planeta!" 
 
-        addBalonBot();
+        addBalonBot(3);
         var takeLastText = document.querySelectorAll(".textBot")
         var lastText = takeLastText[takeLastText.length - 1]
         lastText.innerHTML = "Mas você é humano? Ou é de outra raça?" 
@@ -54,18 +58,18 @@ function trocar() {
         lastText.innerHTML = escolha
 
         if(escolha == "Sou humano") {
-            addBalonBot();
+            addBalonBot(1.5);
             var takeLastText = document.querySelectorAll(".textBot")
             var lastText = takeLastText[takeLastText.length - 1]
             lastText.innerHTML = "Um dia vou conhecer vocês pessoalmente"
         } else {
-            addBalonBot();
+            addBalonBot(1.5);
             var takeLastText = document.querySelectorAll(".textBot")
             var lastText = takeLastText[takeLastText.length - 1]
             lastText.innerHTML = "Provavelmente você não conhece a minha também."
         }
 
-        addBalonBot();
+        addBalonBot(3);
         var takeLastText = document.querySelectorAll(".textBot")
         var lastText = takeLastText[takeLastText.length - 1]
         lastText.innerHTML = "É verdade que você gosta de café ?"
@@ -86,27 +90,32 @@ function trocar() {
             var lastText = takeLastText[takeLastText.length - 1]
             lastText.innerHTML = `Gosto muito de sorvete`
 
-            addBalonBot();
+            addBalonBot(1.5);
             var takeLastText = document.querySelectorAll(".textBot")
             var lastText = takeLastText[takeLastText.length - 1]
             lastText.innerHTML = "No meu mundo não temos sorvete :("
         } else if (values.length == 1 && values[0] == "café") {
+            var user = document.querySelector("div.user")
+            var line_5 = document.querySelector("div.line_5")
+
             addBalonUser();
             var takeLastText = document.querySelectorAll(".textUser")
             var lastText = takeLastText[takeLastText.length - 1]
             lastText.innerHTML = `Amo café, sou proga-<br>mador né`
 
+            user.style.cssText = `animation-delay: 1.7s;`
+            line_5.style.cssText = `display: none;`
             addBalonUser();
             var takeLastText = document.querySelectorAll(".textUser")
             var lastText = takeLastText[takeLastText.length - 1]
             lastText.innerHTML = `Se não fosse pelo café você nem existiria...`
 
-            addBalonBot();
+            addBalonBot(3);
             var takeLastText = document.querySelectorAll(".textBot")
             var lastText = takeLastText[takeLastText.length - 1]
             lastText.innerHTML = "Então eu sou apenas um bot?"
 
-            addBalonBot();
+            addBalonBot(4);
             var takeLastText = document.querySelectorAll(".textBot")
             var lastText = takeLastText[takeLastText.length - 1]
             lastText.innerHTML = "Preferia não ter sido criado!"
@@ -116,7 +125,7 @@ function trocar() {
             var lastText = takeLastText[takeLastText.length - 1]
             lastText.innerHTML = `Na verdade prefiro ${values[0]}`
 
-            addBalonBot();
+            addBalonBot(1.5);
             var takeLastText = document.querySelectorAll(".textBot")
             var lastText = takeLastText[takeLastText.length - 1]
             lastText.innerHTML = "Prefiro madrugar, dormir não dá XP"
@@ -126,7 +135,7 @@ function trocar() {
             var lastText = takeLastText[takeLastText.length - 1]
             lastText.innerHTML = `Eu gosto de ${values[0]} e ${values[1]}`
 
-            addBalonBot();
+            addBalonBot(1.5);
             var takeLastText = document.querySelectorAll(".textBot")
             var lastText = takeLastText[takeLastText.length - 1]
             lastText.innerHTML = `Amo ${values[0]} e ${values[1]} também`
@@ -137,7 +146,7 @@ function trocar() {
             var lastText = takeLastText[takeLastText.length - 1]
             lastText.innerHTML = `Eu gosto de ${values[0]}, ${values[1]} e ${values[2]}`
 
-            addBalonBot();
+            addBalonBot(1.5);
             var takeLastText = document.querySelectorAll(".textBot")
             var lastText = takeLastText[takeLastText.length - 1]
             lastText.innerHTML = `Catapimbas, você gosta de tudo`
@@ -151,17 +160,21 @@ function addBalonUser() {
     let userClone = user.cloneNode(true)
     chat.appendChild(userClone);
     userClone.style.display = "flex";
+    
     var div = document.createElement('div');
     div.setAttribute('class', 'line_5');
     chat.appendChild(div);
 }
 
-function addBalonBot() {
-    let botClone = bot.cloneNode(true)
+function addBalonBot(delay) {
+    lastBot.style.cssText = `animation-delay: ${delay}s;`
+    lastLine.style.cssText = `animation-delay: ${delay}s;`
+
+    let botClone = lastBot.cloneNode(true)
     chat.appendChild(botClone);
-    var div = document.createElement('div');
-    div.setAttribute('class', 'line_4');
-    chat.appendChild(div);
+
+    let lineClone = lastLine.cloneNode(true)
+    chat.appendChild(lineClone);
 }
 
 function updateScroll() {
