@@ -105,6 +105,19 @@
     margin-top: 30px;
 }
 
+.chatButton {
+    width: 10rem;
+    height: 2.8rem;
+    color: white;
+    border-radius: 10px;
+    background-color: #FFA473;
+    cursor: pointer;
+    order: 1;
+
+    font-size: 18px;
+    transition: 0.2s;
+}
+
 .line_1 {
     width: 100px;
     height: 2px;
