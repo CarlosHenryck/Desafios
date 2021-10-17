@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake bot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="cardsContainer">
+        <div class="card_0">
+            <p class="ask">🍁 PERGUNTA 1 🍁</p>
+            <div class="line_1"></div>
+            <p class="question_1">Qual o seu nome ?</p>
+            <textarea name="name" id="name"></textarea>    
+            <div class="foot">
+                <button class="button" onClick="trocar()">Prosseguir</button> 
+                <div class="line_2"></div>
+            </div>   
+        </div>
+
+        <div class="card_1">
+            <p class="ask">🍁 PERGUNTA 2 🍁</p>
+            <div class="line_1"></div>
+            <p class="question_1">Em que planeta você vive?</p>
+            <textarea name="world" id="world"></textarea>    
+            <div class="foot">
+                <button class="button" onClick="trocar()">Prosseguir</button> 
+                <div class="line_2"></div>
+            </div>   
+        </div>
+
+        <div class="card_2">
+            <p class="ask">🍁 PERGUNTA 3 🍁</p>
+            <div class="line_1"></div>
+            <div class="question_1">
+                <label for="human" class="radioContainer">Sou humano!
+                    <input type="radio" id="human" name="human" value="Sou humano">
+                    <span class="radioCheckmark"></span>
+                </label><br><br>
+
+                <label for="other" class="radioContainer">Pertenço a uma raça que você não conhece!
+                    <input type="radio" id="other" name="human" value="Pertenço a uma raça que você não conhece">
+                    <span class="radioCheckmark"></span>
+                </label>
+            </div>     
+            <div class="foot">
+                <button type="button" class="button" onClick="trocar()">Prosseguir</button>
+                <div class="line_2"></div>
+            </div>   
+        </div>
+
+        <div class="card_3">
+            <p class="ask">🍁 PERGUNTA 4 🍁</p>
+            <div class="line_1"></div>
+            <div class="question_3">
+                <label for="sorvete" class="boxContainer">Gosto de sorvete
+                    <input type="checkbox" id="sorvete" name="preference" value="sorvete">
+                    <span class="boxCheckmark"></span>
+                </label>
+                <br><br>
+                <label for = "dormir" class="boxContainer">Prefiro estar dormindo  
+                     <input type = "checkbox" id="dormir"  name = "preference" value="dormir">
+                     <span class="boxCheckmark"></span>                 
+                </label>
+                <br><br>
+                <label for = "cafe" class="boxContainer">Amo café
+                    <input type = "checkbox" id="cafe"  name = "preference" value="café">
+                    <span class="boxCheckmark"></span>
+                </label>
+            </div>
+            <div class="foot" class="boxContainer">
+                <button class="button" onClick="trocar()">Prosseguir</button> 
+                <div class="line_2"></div>
+            </div>   
+        </div>
+
+        <div class="chat">
+            <h1>Resultado</h1>
+            <div class="line_3"></div>
+
+            <div class="bot">
+                <img src="avatar.png" alt="avatar">
+                <p class="textBot"></p>
+            </div>
+            <div class="line_4"></div>
+            <div class="user">
+                <p class="textUser"></p>
+                <img src="avatar.png" alt="avatar">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://github.com/CarlosHenryck">
+            <img src="github.png" alt="github icon">
+            CarlosHenryck
+        </a>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
