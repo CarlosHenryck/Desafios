@@ -1,4 +1,5 @@
 contador = 0
+let card_0 = document.querySelector("div.card_0")
 let card_1 = document.querySelector("div.card_1")
 let card_2 = document.querySelector("div.card_2")
 let card_3 = document.querySelector("div.card_3")
@@ -16,10 +17,19 @@ let user = document.querySelector("div.user")
 
 let escolha_1 = document.getElementsByName("human")
 
-document.querySelector("p.textBot").innerHTML = "Olá Henryck, de que planeta você é?"
-
 function trocar() {
     if(contador == 0) {
+        var value = document.querySelector("#name").value
+
+        addBalonBot(0.1);
+        var takeLastText = document.querySelectorAll(".textBot")
+        var lastText = takeLastText[takeLastText.length - 1]
+        lastText.innerHTML = `Olá ${value}, de que planeta você é?`
+
+        card_0.style.display = 'none';
+        card_1.style.display = 'flex';
+
+    } else if(contador == 1) {
         var value = document.querySelector("#world").value
         addBalonUser();
 
@@ -40,7 +50,7 @@ function trocar() {
         var lastText = takeLastText[takeLastText.length - 1]
         lastText.innerHTML = "Mas você é humano? Ou é de outra raça?" 
 
-    } else if(contador == 1) {
+    } else if(contador == 2) {
         var escolha;
         
         for(var i = 0; i < escolha_1.length; i++){
@@ -76,7 +86,7 @@ function trocar() {
 
         updateScroll()
 
-    }else if(contador == 2) {
+    }else if(contador == 3) {
         var preference = document.querySelectorAll("[name=preference]:checked")
         var values = []
 
@@ -96,16 +106,16 @@ function trocar() {
             lastText.innerHTML = "No meu mundo não temos sorvete :("
         } else if (values.length == 1 && values[0] == "café") {
             var user = document.querySelector("div.user")
-            var line_5 = document.querySelector("div.line_5")
+            
 
             addBalonUser();
             var takeLastText = document.querySelectorAll(".textUser")
             var lastText = takeLastText[takeLastText.length - 1]
             lastText.innerHTML = `Amo café, sou proga-<br>mador né`
 
-            user.style.cssText = `animation-delay: 1.7s;`
-            line_5.style.cssText = `display: none;`
-            addBalonUser();
+            user.style.cssText = `animation-delay: 1.5s;`
+
+            addBalonUser(1.5);
             var takeLastText = document.querySelectorAll(".textUser")
             var lastText = takeLastText[takeLastText.length - 1]
             lastText.innerHTML = `Se não fosse pelo café você nem existiria...`
@@ -156,13 +166,14 @@ function trocar() {
     updateScroll()
 }
 
-function addBalonUser() {
+function addBalonUser(delay) {
     let userClone = user.cloneNode(true)
     chat.appendChild(userClone);
     userClone.style.display = "flex";
     
     var div = document.createElement('div');
     div.setAttribute('class', 'line_5');
+    div.style.cssText = `animation-delay: ${delay}s;`
     chat.appendChild(div);
 }
 
@@ -172,9 +183,11 @@ function addBalonBot(delay) {
 
     let botClone = lastBot.cloneNode(true)
     chat.appendChild(botClone);
+    botClone.style.display = "flex"
 
     let lineClone = lastLine.cloneNode(true)
     chat.appendChild(lineClone);
+    lineClone.style.display = "block"
 }
 
 function updateScroll() {

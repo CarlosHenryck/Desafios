@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio 1</title>
+    <title>Fake bot</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
@@ -12,8 +12,19 @@
 
 <body>
     <div class="cardsContainer">
-        <div class="card_1">
+        <div class="card_0">
             <p class="ask">🍁 PERGUNTA 1 🍁</p>
+            <div class="line_1"></div>
+            <p class="question_1">Qual o seu nome ?</p>
+            <textarea name="name" id="name"></textarea>    
+            <div class="foot">
+                <button class="button" onClick="trocar()">Prosseguir</button> 
+                <div class="line_2"></div>
+            </div>   
+        </div>
+
+        <div class="card_1">
+            <p class="ask">🍁 PERGUNTA 2 🍁</p>
             <div class="line_1"></div>
             <p class="question_1">Em que planeta você vive?</p>
             <textarea name="world" id="world"></textarea>    
@@ -24,7 +35,7 @@
         </div>
 
         <div class="card_2">
-            <p class="ask">🍁 PERGUNTA 2 🍁</p>
+            <p class="ask">🍁 PERGUNTA 3 🍁</p>
             <div class="line_1"></div>
             <div class="question_1">
                 <label for="human" class="radioContainer">Sou humano!
@@ -44,7 +55,7 @@
         </div>
 
         <div class="card_3">
-            <p class="ask">🍁 PERGUNTA 3 🍁</p>
+            <p class="ask">🍁 PERGUNTA 4 🍁</p>
             <div class="line_1"></div>
             <div class="question_3">
                 <label for="sorvete" class="boxContainer">Gosto de sorvete
@@ -74,11 +85,11 @@
 
             <div class="bot">
                 <img src="avatar.png" alt="avatar">
-                <p class="textBot">teste</p>
+                <p class="textBot"></p>
             </div>
             <div class="line_4"></div>
             <div class="user">
-                <p class="textUser">teste</p>
+                <p class="textUser"></p>
                 <img src="avatar.png" alt="avatar">
             </div>
         </div>

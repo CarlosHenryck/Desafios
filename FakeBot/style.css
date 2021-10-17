@@ -27,8 +27,20 @@
     background-image: linear-gradient(to right, #FF7E5F, #FEB47B);
 }
 
-.card_1 {
+.card_0 {
     display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 35.688rem;
+    height: 20rem;
+    background-color: #1E0E00;
+    border-radius: 100px 10px;
+    text-align: center;
+}
+
+.card_1 {
+    display: none;
     align-items: center;
     flex-direction: column;
 
@@ -99,6 +111,7 @@
     background-color: white;
     margin-left: 50px;
     border-radius: 20px;
+    padding-bottom: 30px;
 }
 
 .chat h1 {
@@ -142,6 +155,7 @@
 }
 
 .line_4 {
+    display: none;
     align-self: flex-start;
     width: 0px;
     min-height: 2px;
@@ -179,7 +193,7 @@
 }
 
 .bot {
-    display: flex;
+    display: none;
     width: 80%;
     align-items: center;
     justify-content: start;
@@ -225,8 +239,10 @@ textarea {
     border-radius: 5px;
     margin-top: 8px;
     resize: none;
-    font-size: 25px;
-  }
+    font-size: 20px;
+    padding-left: 10px;
+    padding-top: 2.5px;
+}
 
 .ask {
     color: white;
